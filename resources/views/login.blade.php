@@ -3,7 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Halaman Login Aplikasi</title>
+
+    <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
+    <link rel="icon" href="{{ asset('logo1.png') }}" type="image/png" sizes="32x32">
+
+    <title>Halaman Login</title>
     
     <link rel="stylesheet" href="{{ asset('css/login.css') }}">
 </head>
@@ -16,7 +20,7 @@
             <div class="frame-72">
               <div class="login">Login</div>
               <div
-                class="selamat-datang-kembali-akses-semua-informasi-tanam-perawatan-dan-hasil-panenmu-di-website-ini"
+                class="sambutan_login"
               >
                 Selamat datang kembali! Akses semua informasi tanam, perawatan, dan hasil
                 panenmu di Website ini.

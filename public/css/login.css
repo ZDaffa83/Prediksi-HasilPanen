@@ -51,24 +51,27 @@ body {
 .login {
     color: #211f1b;
     font-family: "Manrope-Bold", sans-serif;
-    font-size: 58px;
+    font-size: 62px;
     font-weight: 700;
 }
 
-.selamat-datang-kembali-akses-semua-informasi-tanam-perawatan-dan-hasil-panenmu-di-website-ini {
+.sambutan_login {
     color: rgba(0, 0, 0, 0.4);
     font-family: "Manrope-Medium", sans-serif;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 500;
     width: 434px;
+    text-align: justify;
+    margin-top: 10px;
 }
 
 /* --- Styling Form Input Fields --- */
 .login-form { 
     width: 100%; 
     max-width: 459px; 
-    margin-top: 50px;
+    margin-top: 20px;
     position: relative;
+
 }
 
 .e-mail, .password {
@@ -98,7 +101,7 @@ body {
 .forgot-password {
     color: rgba(64, 39, 39, 0.6);
     font-family: "Manrope-Medium", sans-serif;
-    font-size: 20px;
+    font-size: 16px;
     font-weight: 500;
     margin-top: 15px;
     margin-bottom: 30px;
@@ -106,6 +109,7 @@ body {
     width: auto;
     
 }
+
 .fp_text:hover {
     color: #556601;
     cursor: pointer;
