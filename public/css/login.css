@@ -97,6 +97,46 @@ body {
     font-family: "Manrope-Medium", sans-serif;
     font-size: 14px;
 }
+.password-textbox {
+    background: #f2f3f7;
+    width: 100%;
+    height: 60px;
+    border: none;
+    border-radius: 5px;
+    box-sizing: border-box;
+    
+    padding: 10px 45px 10px 15px; 
+    
+    &::-webkit-credentials-auto-fill-button {
+        visibility: hidden;
+        position: absolute; 
+        right: 0;
+    }
+    /* Untuk Microsoft Edge dan IE */
+    &::-ms-reveal {
+        display: none;
+        width: 0;
+        height: 0;
+    }
+}
+.password-field-wrapper {
+    position: relative; 
+    width: 100%;
+}
+.toggle-password {
+    position: absolute;
+    right: 15px; 
+    top: 50%; 
+    transform: translateY(-50%); 
+    cursor: pointer;
+    user-select: none;
+    z-index: 10;
+}
+
+.toggle-password svg {
+    width: 24px;
+    height: 24px;
+}
 
 .forgot-password {
     color: rgba(64, 39, 39, 0.6);
