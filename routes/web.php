@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\AdminController;
+use App\Http\Controllers\Auth\LoginAdminController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -10,7 +12,26 @@ use App\Http\Controllers\AdminPanelController;
 
 // Rute Default (Splash Page)
 Route::get('/', function () {
+<<<<<<< HEAD
     return view('welcome'); 
+=======
+    return view('index');
+});
+
+Route::get('/login', [LoginAdminController::class, 'showLoginForm'])->name('login');
+Route::post('/login', [LoginAdminController::class, 'login'])->name('admin.login');
+Route::post('/logout', [LoginAdminController::class, 'logout'])->name('admin.logout');
+Route::get('/register', [AdminController::class, 'index'])->name('register.show');
+Route::get('/admin/list', [AdminController::class, 'index'])->name('admin.list');
+
+// Route::resource akan membuat semua 7 route CRUD (index, create, store, show, edit, update, destroy)
+Route::resource('/admin', AdminController::class)->except(['index', 'create', 'store', 'show']);
+// Route Dashboard (Membutuhkan otentikasi)
+Route::middleware(['auth'])->group(function () {
+    Route::get('/admin/dashboard', function () {
+        return view('fdadmin.dashboard');
+    })->name('admin.dashboard');
+>>>>>>> 4bdba2aa028175464dbe15ff8bbc5af596f225a4
 });
 
 // Rute Login (Halaman Form)
