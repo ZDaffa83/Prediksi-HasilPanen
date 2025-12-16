@@ -52,57 +52,64 @@
     
     {{-- BARIS 3 & 4: Fitur Utama (6 Card Fitur) --}}
     <div class="row">
-        {{-- Prediksi Hasil Panen --}}
+        
+        {{-- 1. Prediksi Hasil Panen -> Rute Fitur Petani --}}
         <div class="col-lg-4 col-md-6 col-sm-12">
             <div class="agrisense-card card-feature">
                 <div class="title">Prediksi Hasil Panen</div>
                 <i class="fas fa-clock fa-2x"></i> 
-                <button class="btn-buka">Buka</button>
+                {{-- Mengarah ke rute fitur petani: /prediksi_panen --}}
+                <a href="{{ route('fitur.prediksi') }}" class="btn-buka">Buka</a> 
             </div>
         </div>
         
-        {{-- Riwayat Tanam --}}
+        {{-- 2. Riwayat Tanam -> Rute Fitur Petani (Anda mungkin perlu membuat rutenya) --}}
         <div class="col-lg-4 col-md-6 col-sm-12">
             <div class="agrisense-card card-feature">
                 <div class="title">Riwayat Tanam</div>
                 <i class="fas fa-seedling fa-2x"></i> 
-                <button class="btn-buka">Buka</button>
+                {{-- Mengarah ke rute Lahan Admin (Contoh sementara menggunakan SB Admin 2) --}}
+                <a href="{{ route('admin.lahan') }}" class="btn-buka">Buka</a> 
             </div>
         </div>
         
-        {{-- Perawatan HPT --}}
+        {{-- 3. Perawatan HPT -> Rute Fitur Petani --}}
         <div class="col-lg-4 col-md-6 col-sm-12">
             <div class="agrisense-card card-feature">
                 <div class="title">Perawatan HPT</div>
                 <i class="fas fa-hand-holding-water fa-2x"></i> 
-                <button class="btn-buka">Buka</button>
+                {{-- Mengarah ke rute fitur petani: /perawatan_hpt --}}
+                <a href="{{ route('fitur.perawatan') }}" class="btn-buka">Buka</a>
             </div>
         </div>
         
-        {{-- Weekly Report --}}
+        {{-- 4. Weekly Report -> Rute Admin (Contoh, karena laporan biasanya manajemen data) --}}
         <div class="col-lg-4 col-md-6 col-sm-12">
             <div class="agrisense-card card-feature">
                 <div class="title">Weekly Report</div>
                 <i class="fas fa-file-alt fa-2x"></i> 
-                <button class="btn-buka">Buka</button>
+                {{-- Mengarah ke rute Log Aktivitas Admin (Contoh sementara) --}}
+                <a href="{{ route('admin.log_aktivitas') }}" class="btn-buka">Buka</a>
             </div>
         </div>
         
-        {{-- Monitoring Cuaca --}}
+        {{-- 5. Monitoring Cuaca -> Rute Admin (Sama seperti Weekly Report) --}}
         <div class="col-lg-4 col-md-6 col-sm-12">
             <div class="agrisense-card card-feature">
                 <div class="title">Monitoring Cuaca</div>
                 <i class="fas fa-cloud-sun fa-2x"></i> 
-                <button class="btn-buka">Buka</button>
+                {{-- Mengarah ke rute Kelola Petani Admin (Contoh sementara) --}}
+                <a href="{{ route('admin.petani') }}" class="btn-buka">Buka</a>
             </div>
         </div>
         
-        {{-- Input Hasil Panen --}}
+        {{-- 6. Input Hasil Panen -> Rute Admin (Juga dianggap sebagai halaman form data) --}}
         <div class="col-lg-4 col-md-6 col-sm-12">
             <div class="agrisense-card card-feature">
                 <div class="title">Input Hasil Panen</div>
                 <i class="fas fa-clipboard-list fa-2x"></i> 
-                <button class="btn-buka">Buka</button>
+                {{-- Mengarah ke rute Kelola Bimbingan Admin (Contoh sementara) --}}
+                <a href="{{ route('admin.bimbingan') }}" class="btn-buka">Buka</a>
             </div>
         </div>
     </div>
