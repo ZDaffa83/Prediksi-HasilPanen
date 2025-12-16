@@ -1,0 +1,106 @@
+
+:root {
+    --color-primary: #1F451A; 
+    --color-secondary: #D4EDC1; 
+    --color-card-feature: #35624A; 
+    --color-text-dark: #333;
+    --color-text-light: #fff;
+    --card-radius: 12px;
+    --gap-spacing: 20px;
+}
+
+body {
+    background-color: #F8F9FA; 
+    font-family: 'Arial', sans-serif; 
+}
+.agrisense-header {
+    background-color: var(--color-primary);
+    color: var(--color-text-light);
+    padding: 15px var(--gap-spacing);
+    border-radius: var(--card-radius);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.agrisense-logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.agrisense-nav a {
+    color: var(--color-text-light);
+    margin-left: var(--gap-spacing);
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.agrisense-card {
+    background-color: #fff;
+    border-radius: var(--card-radius);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+    padding: var(--gap-spacing);
+    margin-bottom: var(--gap-spacing);
+    text-align: center;
+    border: none;
+}
+
+.card-weather-primary {
+    background-color: var(--color-secondary);
+    color: var(--color-text-dark);
+    padding: 30px;
+    height: 100%;
+}
+.weather-value {
+    font-size: 3rem; 
+    font-weight: bold;
+    margin-top: 5px;
+}
+
+.card-daily-forecast {
+    background-color: var(--color-secondary);
+    padding: 10px;
+}
+
+.daily-item {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 10px 5px;
+    margin: 5px;
+    display: inline-block;
+    width: 12%;
+}
+
+
+.card-feature {
+    background-color: var(--color-card-feature);
+    color: var(--color-text-light);
+    height: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+.card-feature .title {
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+.card-feature .btn-buka {
+    background-color: #A0C389; 
+    color: var(--color-primary);
+    border: none;
+    padding: 8px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.row {
+    margin-left: -10px;
+    margin-right: -10px;
+}
+.col-lg-4, .col-md-6, .col-sm-12 {
+    padding-left: 10px;
+    padding-right: 10px;
+}
