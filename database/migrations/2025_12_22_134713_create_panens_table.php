@@ -11,13 +11,11 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('petani', function (Blueprint $table) {
-            $table->id('id_petani'); // PK
-            $table->string('nama_petani');
-            $table->text('alamat');
-            $table->string('no_hp');
-            $table->string('username')->unique();
-            $table->string('password');
+        Schema::create('panens', function (Blueprint $table) {
+            $table->id();
+            $table->string('jenis_rumput'); // Gajah, Raja, Pakchong, Odot
+            $table->float('tonase');
+            $table->date('tanggal_panen');
             $table->timestamps();
         });
     }
@@ -27,6 +25,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('petanis');
+        Schema::dropIfExists('panens');
     }
 };

@@ -23,7 +23,7 @@
             <div class="agrisense-logo">AgriSmart</div>
             <nav class="agrisense-nav">
                 <a href="{{ url('/dashboard') }}">Home</a>
-                <a href="{{ url('/help-desk') }}">Help Desk</a>
+                <a href="{{ route('helpdesk') }}">Help Desk</a>
             </nav>
             <div class="notification-icon">
                 <i class="fas fa-bell"></i> </div>
