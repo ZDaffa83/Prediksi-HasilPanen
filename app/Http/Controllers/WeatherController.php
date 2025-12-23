@@ -11,7 +11,7 @@ class WeatherController extends Controller
     public function index()
     {
         $weatherData = Cache::remember('weather_detail_limpakuwus', 1800, function () {
-            // Tetap menggunakan kode wilayah Limpakuwus
+            // TKode wilayah Limpakuwus
             $response = Http::get("https://api.bmkg.go.id/publik/prakiraan-cuaca?adm4=33.02.13.2007");
             return $response->successful() ? $response->json() : null;
         });
@@ -21,7 +21,7 @@ class WeatherController extends Controller
         }
 
         // Ambil data jam saat ini (Hourly)
-        // BMKG menyediakan data per 3 jam, kita ambil array hari pertama
+        // BMKG menyediakan data per 3 jam
         $hourlyData = $weatherData['data'][0]['cuaca'][0] ?? [];
         
         // Data Cuaca Utama (Ambil indeks 0 sebagai kondisi sekarang)

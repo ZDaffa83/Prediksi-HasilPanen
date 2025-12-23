@@ -100,7 +100,7 @@
             <div class="agrisense-card card-feature text-center">
                 <div class="title">Perawatan HPT</div>
                 <i class="fas fa-hand-holding-water fa-2x mb-2"></i> 
-                <a href="{{ route('riwayat.index') }}" class="btn-buka">Buka</a>
+                <a href="{{ route('hpt.index') }}" class="btn-buka">Buka</a>
             </div>
         </div>
         

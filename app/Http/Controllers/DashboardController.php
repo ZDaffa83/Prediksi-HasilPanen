@@ -35,7 +35,6 @@ class DashboardController extends Controller
 
             // 2. Ambil ringkasan harian (mengambil data jam 12:00 setiap harinya sebagai perwakilan)
             foreach ($weatherData['data'][0]['cuaca'] as $dayForecast) {
-                // Kita ambil data tengah hari (sekitar index ke-2 atau jam 12:00)
                 $midDay = $dayForecast[2] ?? $dayForecast[0]; 
                 
                 // Mendapatkan nama hari singkat (Mon, Tue, dsb)

@@ -71,7 +71,7 @@
         </div> 
         <img 
             class="login-img" 
-            src="{{ asset('images/login_img.png') }}"
+            src="{{ asset('images/piclogin.png') }}"
             alt="Latar belakang pertanian"
         />
         

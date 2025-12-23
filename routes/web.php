@@ -7,6 +7,8 @@ use App\Http\Controllers\RiwayatTanamController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\WeatherController;
 use App\Http\Controllers\LaporanPanenController;
+use App\Http\Controllers\HelpDeskController;
+use App\Http\Controllers\PerawatanHPTController;
 
 // Rute Default
 Route::get('/', function () {
@@ -58,7 +60,7 @@ Route::get('/prediksi-panen', function () {
 })->name('panen.prediksi');
 
 Route::get('/helpdesk', function () {
-    return view('helpdesk');
+    return view('help_desk');
 })->name('helpdesk');
 
 //post get
@@ -67,6 +69,13 @@ Route::post('/riwayat-tanam', [RiwayatTanamController::class, 'store'])->name('r
 Route::get('/riwayat-tanam/{id}', [RiwayatTanamController::class, 'show'])->name('riwayat.show');    // Read detail
 Route::put('/riwayat-tanam/{id}', [RiwayatTanamController::class, 'update'])->name('riwayat.update'); // Update
 Route::delete('/riwayat-tanam/{id}', [RiwayatTanamController::class, 'destroy'])->name('riwayat.destroy'); // Delete
+
+Route::get('/perawatan', [PerawatanHPTController::class, 'index'])->name('hpt.index');
+Route::post('/perawatan-hpt', [PerawatanHPTController::class, 'store'])->name('hpt.store');
+Route::put('/perawatan-hpt/{id}', [PerawatanHPTController::class, 'update'])->name('hpt.update');
+Route::delete('/perawatan-hpt/{id}', [PerawatanHPTController::class, 'destroy'])->name('hpt.destroy');
+Route::get('/perawatan-hpt', [PerawatanHPTController::class, 'index'])->name('hpt.index');
+Route::post('/perawatan-hpt', [PerawatanHPTController::class, 'store'])->name('hpt.store');
 
 Route::get('/laporan-panen', [LaporanPanenController::class, 'index'])->name('laporan.index');
 Route::post('/input-panen', [App\Http\Controllers\LaporanPanenController::class, 'store'])->name('panen.store');

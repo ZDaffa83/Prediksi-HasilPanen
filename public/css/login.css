@@ -1,3 +1,13 @@
+:root {
+    --color-primary: #1F451A; 
+    --color-secondary: #D4EDC1; 
+    --color-card-feature: #35624A; 
+    --color-text-dark: #333;
+    --color-text-light: #fff;
+    --card-radius: 12px;
+    --gap-spacing: 20px;
+}
+
 .login-page,
 .login-page * {
     box-sizing: border-box;
@@ -6,136 +16,98 @@
 body {
     margin: 0;
     padding: 0;
-}
-
-/* --- CONTAINER UTAMA (login-page) --- */
-.login-page {
     background: #f9f9f9;
-    height: 100vh; 
-    width: 100vw;
-    display: flex; 
-    position: relative;
-    overflow: hidden;
 }
 
+.login-page {
+    min-height: 100vh;
+    width: 100vw;
+    display: flex;
+    position: relative;
+    overflow-x: hidden;
+}
 
 .login-img {
-    width: 50%; 
-    height: 100%;
+    width: 50%;
+    height: 100vh;
     object-fit: cover;
-    margin: 0;
-    padding: 0;
 }
 
 .login-form-container {
-    width: 50%; 
-    padding: 60px 80px; 
+    width: 50%;
+    padding: 40px 80px;
     display: flex;
     flex-direction: column;
-    justify-content: center; 
-    align-items: flex-start; 
+    justify-content: center;
+    align-items: center;
 }
 
-/* --- Judul & Deskripsi (frame-72) --- */
 .frame-72 {
+    width: 100%;
+    max-width: 459px;
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    align-items: flex-start;
-    justify-content: flex-start;
-    position: relative; 
-    
-    
+    gap: 15px;
+    margin-bottom: 20px;
 }
 
 .login {
     color: #211f1b;
     font-family: "Manrope-Bold", sans-serif;
-    font-size: 62px;
+    font-size: clamp(32px, 5vw, 62px);
     font-weight: 700;
 }
 
 .sambutan_login {
     color: rgba(0, 0, 0, 0.4);
     font-family: "Manrope-Medium", sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
-    width: 434px;
     text-align: justify;
-    margin-top: 10px;
 }
 
-/* --- Styling Form Input Fields --- */
-.login-form { 
-    width: 100%; 
-    max-width: 459px; 
-    margin-top: 20px;
+.login-form {
+    width: 100%;
+    max-width: 459px;
     position: relative;
-
 }
 
 .e-mail, .password {
     color: rgba(0, 0, 0, 0.6);
     font-family: "Manrope-Medium", sans-serif;
-    font-size: 20px;
+    font-size: 18px;
     font-weight: 500;
-    margin-top: 25px;
-    margin-bottom: 5px;
+    margin-top: 20px;
+    margin-bottom: 8px;
 }
 
-.login-form input[type="email"],
-.login-form input[type="password"] {
+.password-textbox, .password-email {
     background: #f2f3f7;
-    width: 100%; 
+    width: 100%;
     height: 60px;
     padding: 10px 15px;
     border: none;
-    border-radius: 5px;
-    box-sizing: border-box;
-}
-.password-textbox, .password-email {
+    border-radius: 8px;
     font-family: "Manrope-Medium", sans-serif;
     font-size: 14px;
 }
+
 .password-textbox {
-    background: #f2f3f7;
-    width: 100%;
-    height: 60px;
-    border: none;
-    border-radius: 5px;
-    box-sizing: border-box;
-    
-    padding: 10px 45px 10px 15px; 
-    
-    &::-webkit-credentials-auto-fill-button {
-        visibility: hidden;
-        position: absolute; 
-        right: 0;
-    }
-    /* Untuk Microsoft Edge dan IE */
-    &::-ms-reveal {
-        display: none;
-        width: 0;
-        height: 0;
-    }
-}
-.password-field-wrapper {
-    position: relative; 
-    width: 100%;
-}
-.toggle-password {
-    position: absolute;
-    right: 15px; 
-    top: 50%; 
-    transform: translateY(-50%); 
-    cursor: pointer;
-    user-select: none;
-    z-index: 10;
+    padding-right: 45px;
 }
 
-.toggle-password svg {
-    width: 24px;
-    height: 24px;
+.password-field-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    z-index: 10;
 }
 
 .forgot-password {
@@ -144,10 +116,15 @@ body {
     font-size: 16px;
     font-weight: 500;
     margin-top: 15px;
-    margin-bottom: 30px;
-    text-align: left;
-    width: auto;
-    
+    margin-bottom: 25px;
+    text-align: right;
+    width: 100%;
+}
+
+.fp_text {
+    text-decoration: none;
+    color: inherit;
+    transition: color 0.3s;
 }
 
 .fp_text:hover {
@@ -155,24 +132,75 @@ body {
     cursor: pointer;
 }
 
-/* --- Tombol Login (login-button) --- */
 .login-button {
     background: #3c4801;
     border-radius: 10px;
-    width: 100%; 
-    height: 65px;
+    width: 100%;
+    height: 60px;
     border: none;
     cursor: pointer;
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    
     color: #f9f9f9;
     font-family: "Manrope-Bold", sans-serif;
-    font-size: 24px;
+    font-size: 20px;
     font-weight: 700;
 }
-.login-button:hover {
-    background: #556601;
+
+.login-button:hover { 
+    background: #556601; 
+}
+
+@media (max-width: 1024px) {
+    .login-form-container {
+        padding: 40px;
+    }
+}
+
+@media (max-width: 768px) {
+    .login-page {
+        flex-direction: column;
+    }
+
+    .login-img {
+        width: 100%;
+        height: 30vh;
+    }
+
+    .login-form-container {
+        width: 100%;
+        height: auto;
+        padding: 40px 25px;
+        align-items: center;
+    }
+
+    .frame-72 {
+        align-items: center;
+        text-align: center;
+    }
+
+    .sambutan_login {
+        width: 100%;
+        font-size: 16px;
+        text-align: center;
+    }
+
+    .login {
+        font-size: 40px;
+    }
+
+    .forgot-password {
+        text-align: center;
+        margin-top: 10px;
+        margin-bottom: 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .login-img {
+        display: none;
+    }
+    
+    .login-form-container {
+        justify-content: flex-start;
+        padding-top: 60px;
+    }
 }
