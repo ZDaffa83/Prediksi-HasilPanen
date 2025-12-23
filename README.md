@@ -26,7 +26,7 @@ Pastikan sudah terinstall:
 ## Step by Step
 
 ### 1️⃣ Clone Repository
-```bash
+
 git clone https://github.com/ZDaffa83/Prediksi-HasilPanen.git
 cd Prediksi-HasilPanen
 
